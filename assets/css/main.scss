@@ -1,6 +1,94 @@
-body {
-    background: red;
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    //Default font size on html element is 100%, equivalent to 16px;
+    @return #{$remSize}rem;
+}
+// header
+
+header {
+    margin-top: 50px;
+    position: relative;
+    padding: 0 !important;
+
+    &:before,
+    &:after {
+        top: 50%;
+        width: 50%;
+        z-index: -1;
+        height: 1px;
+        content: "";
+        display: block;
+        background: red;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+
+    &:before {
+        left: 0;
+    }
+
+    &:after {
+        right: 0;
+    }
+
     h1 {
-        color: yellow;
+        margin-right: 60px;
+    }
+
+    .social-links {
+
+        i {
+            font-size: 20px;
+            margin-right: 20px;
+            border: 1px solid red;
+            border-radius: 30px;
+            padding: 7px 9px;
+
+        }
+
+        .fa-facebook-f {
+            padding: 7px 12px !important;
+        }
+    }
+}
+
+// benefits
+.benefits {
+    margin-top: 146px;
+
+    i {
+        font-size: 50px;
+    }
+
+    h3 {
+        margin: 35px 0 28px 0;
+        @include fontSize(22px);
+    }
+
+    p {
+        padding: 0 25px;
+        @include fontSize(16px);
+    }
+}
+
+// showcase
+.showcase {
+    margin-top: 75px;
+
+    .project-description {
+        margin-top: 15px;
+        margin-left: 13px;
+        margin-right: 200px;
+
+        &:nth-child(even) {
+            margin-left: 30px !important;
+            // still not working
+        }
     }
 }
