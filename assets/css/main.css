@@ -1,3 +1,20 @@
+body {
+  overflow-x: hidden; }
+
+h3 {
+  font-size: 22px;
+  font-size: 1.375rem; }
+
+h4 {
+  font-size: 18px;
+  font-size: 1.125rem; }
+
+a:hover {
+  text-decoration: none; }
+
+.separated-content {
+  margin-top: 75px; }
+
 header {
   margin-top: 50px;
   position: relative;
@@ -15,7 +32,7 @@ header {
   header:before {
     left: 0; }
   header:after {
-    right: 0; }
+    right: -50px; }
   header h1 {
     margin-right: 60px; }
   header .social-links i {
@@ -27,26 +44,28 @@ header {
   header .social-links .fa-facebook-f {
     padding: 7px 12px !important; }
 
-.benefits {
+#benefits {
   margin-top: 146px; }
-  .benefits i {
+  #benefits i {
     font-size: 50px; }
-  .benefits h3 {
-    margin: 35px 0 28px 0;
-    font-size: 22px;
-    font-size: 1.375rem; }
-  .benefits p {
+  #benefits h3 {
+    margin: 35px 0 28px 0; }
+  #benefits p {
     padding: 0 25px;
     font-size: 16px;
     font-size: 1rem; }
 
-.showcase {
-  margin-top: 75px; }
-  .showcase .project-description {
-    margin-top: 15px;
-    margin-left: 13px;
-    margin-right: 200px; }
-    .showcase .project-description:nth-child(even) {
-      margin-left: 30px !important; }
+#showcase .project-description {
+  margin-top: 15px;
+  margin-left: 20px;
+  padding-right: 200px; }
+  #showcase .project-description.even {
+    margin-left: 30px; }
+
+#hireMe .contact-social {
+  margin: 25px 0; }
+  #hireMe .contact-social a {
+    margin: 0 20px;
+    font-size: 20px; }
 
 /*# sourceMappingURL=main.css.map */

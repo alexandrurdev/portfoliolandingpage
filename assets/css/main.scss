@@ -1,16 +1,12 @@
-// Mixin that will include the fall back px declaration as well as the calculated rem value.
-@mixin fontSize($size) {
-    font-size: $size;
-    font-size: calculateRem($size);
+@import './_config';
+
+a {
+    &:hover {
+        
+    }
 }
 
-@function calculateRem($size) {
-    $remSize: $size / 16px;
-    //Default font size on html element is 100%, equivalent to 16px;
-    @return #{$remSize}rem;
-}
 // header
-
 header {
     margin-top: 50px;
     position: relative;
@@ -34,7 +30,7 @@ header {
     }
 
     &:after {
-        right: 0;
+        right: -50px;
     }
 
     h1 {
@@ -59,7 +55,7 @@ header {
 }
 
 // benefits
-.benefits {
+#benefits {
     margin-top: 146px;
 
     i {
@@ -68,7 +64,6 @@ header {
 
     h3 {
         margin: 35px 0 28px 0;
-        @include fontSize(22px);
     }
 
     p {
@@ -78,17 +73,45 @@ header {
 }
 
 // showcase
-.showcase {
-    margin-top: 75px;
+#showcase {
 
     .project-description {
         margin-top: 15px;
-        margin-left: 13px;
-        margin-right: 200px;
+        margin-left: 20px;
+        padding-right: 200px;
 
-        &:nth-child(even) {
-            margin-left: 30px !important;
-            // still not working
+        &.even {
+            margin-left: 30px;
         }
+    }
+}
+
+// about
+#about {
+}
+
+// experience
+#experience {
+}
+
+// certificates
+#certificates{
+}
+
+// hireMe
+#hireMe{
+    .contact-social {
+        margin: 25px 0;
+        a{
+            margin: 0 20px;
+            font-size: 20px;
+        }
+    }
+}
+
+
+#benefits {
+    h3 {
+        // https://codepen.io/caraujo/full/LVPzxO - camera text effect try this next time when u open the project
     }
 }

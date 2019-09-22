@@ -1,0 +1,27 @@
+@import './_mixins';
+
+body {
+    overflow-x: hidden;
+}
+
+h3 {
+    @include fontSize(22px);
+}
+
+h4 {
+    @include fontSize(18px);
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.separated-content {
+    margin-top: 75px;
+}
+
+.link-img-hover {
+    // on user hover over on image with a link put a loop with a nice animation comming from top to middle of the image with some transition and maybe make the image little bigger with transform: scale(1.5);
+}
