@@ -1,5 +1,22 @@
 @import './_mixins';
 
+$primaryColor: #d40c12;
+$secondaryColor: #141414;
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+p,
+i,
+a {
+    color: #fff;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -15,6 +32,7 @@ h4 {
 a {
     &:hover {
         text-decoration: none;
+        color: $primaryColor;
     }
 }
 
@@ -24,4 +42,30 @@ a {
 
 .link-img-hover {
     // on user hover over on image with a link put a loop with a nice animation comming from top to middle of the image with some transition and maybe make the image little bigger with transform: scale(1.5);
+    position: relative;
+    &:after{
+        top: -9999px;
+        left: 50%;
+        font-size: 50px;
+        font-weight: 900; 
+        content: "\f00e";
+        position: absolute;
+        transform: translate(-50%, -50%);
+        font-family: "Font Awesome 5 Free";
+        @include ease();
+        color: $primaryColor;
+    }
+
+    &:hover {
+        @include pointer();
+        
+        &:after{
+            top: 50%;
+
+        }
+    }
+}
+
+.color-primary {
+    color: $primaryColor;
 }

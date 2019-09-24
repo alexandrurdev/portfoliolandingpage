@@ -20,32 +20,32 @@
     <header class="container-fluid text-center mt-50">
         <div class="row">
             <div class="col-sm-4 col-md-4">
-                <h2>Stefan Alexandru Romila (Cloudstar)</h2>
+                <h2 class="text-white">Stefan Alexandru Romila (Cloudstar)</h2>
             </div>
             <div class="col-sm-4 col-md-4">
-                <img src="https://via.placeholder.com/128" alt="" class="rounded-circle">
+                <img src="assets/img/logo.png" alt="" class="rounded-circle logo">
             </div>
             <div class="col-sm-4 col-md-4">
                 <div class="d-flex align-items-center">
-                    <h1 class="d-inline">ARDEV</h1>
+                    <h1 class="d-inline text-white">ARDEV</h1>
                     <div class="social-links d-inline">
                         <a href="#">
-                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-facebook-f text-white"></i>
                         </a>
                         <a href="#">
-                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-instagram text-white"></i>
                         </a>
                         <a href="#">
-                            <i class="fab fa-linkedin-in"></i>
+                            <i class="fab fa-linkedin-in text-white"></i>
                         </a>
                         <a href="#">
-                            <i class="fab fa-github"></i>
+                            <i class="fab fa-github text-white"></i>
                         </a>
                         <a href="#">
-                            <i class="fas fa-envelope"></i>
+                            <i class="fas fa-envelope text-white"></i>
                         </a>
                         <a href="#">
-                            <i class="fab fa-youtube"></i>
+                            <i class="fab fa-youtube text-white"></i>
                         </a>
                     </div>
                 </div>
@@ -59,9 +59,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-4">
-                        <i class="fas fa-code"></i>
-                        <h3 class="text-uppercase">code</h3>
-                        <p>
+                        <i class="fas fa-code color-primary"></i>
+                        <h3 class="text-uppercase text-white">code</h3>
+                        <p class="text-white">
                             I use most latest tehnologies from
                             programming languages to libraries
                             & others. I like to keep my code clean
@@ -69,9 +69,9 @@
                         </p>
                     </div>
                     <div class="col-sm-12 col-md-4">
-                        <i class="fas fa-layer-group"></i>
-                        <h3 class="text-uppercase">design</h3>
-                        <p>
+                        <i class="fas fa-layer-group color-primary"></i>
+                        <h3 class="text-uppercase text-white">design</h3>
+                        <p class="text-white">
                             Yes, i'm a programmer, but I have
                             a little experience with design. I
                             can design your website, at least
@@ -79,9 +79,9 @@
                         </p>
                     </div>
                     <div class="col-sm-12 col-md-4">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3 class="text-uppercase">security</h3>
-                        <p>
+                        <i class="fas fa-shield-alt color-primary"></i>
+                        <h3 class="text-uppercase text-white">security</h3>
+                        <p class="text-white">
                             Your app need security right? Or maybe
                             your website? I can offer protection against
                             malwares, backdoors & threats which can
@@ -98,7 +98,11 @@
         <div class="container-fluid p-0">
             <div class="row">
                 <div class="col-sm-12 col-md-6 p-0">
-                    <img src="https://via.placeholder.com/960x320" alt="" class="w-100">
+                    <div class="project-img">
+                        <a href="#" class="link-img-hover">
+                            <img src="https://via.placeholder.com/960x320" alt="" class="w-100">
+                        </a>
+                    </div>
                 </div>
                 <div class="col-sm-12 col-md-6 p-0">
                     <div class="project-description">
@@ -130,7 +134,9 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 p-0">
-                    <img src="https://via.placeholder.com/960x320" alt="" class="w-100">
+                    <a href="#" class="link-img-hover">
+                        <img src="https://via.placeholder.com/960x320" alt="" class="w-100">
+                    </a>
                 </div>
                 <!-- /.end-item -->
                 <div class="col-sm-12 col-md-6 p-0">
@@ -242,7 +248,8 @@
                     <h3>Certificates:</h3>
                     <div class="row">
                         <div class="col-sm-12 col-md-3">
-                            <a href="assets/img/certificate-js-2019.jpg" target="_blank" class="link-img-hover">
+                            <a href="assets/img/certificate-js-2019.jpg" data-toggle="modal"
+                                data-target="#certificateJSUdemy2019" class="link-img-hover">
                                 <img src="assets/img/certificate-js-2019.jpg" alt="" class="w-100">
                             </a>
                         </div>
@@ -278,6 +285,44 @@
         </div>
     </div>
     <!-- /.hireMe -->
+
+    <!-- modals for projects -->
+
+    <!-- Modal Certificate JS -->
+    <div class="modal fade" id="certificateJSUdemy2019" tabindex="-1" role="dialog"
+        aria-labelledby="certificateJSUdemy2019Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="row">
+                        <div class="col-sm-12 mb-1">
+                            <h6 class="modal-title" id="certificateJSUdemy2019Label">
+                                <a href="https://www.udemy.com/the-complete-javascript-course/">The Complete JavaScript
+                                    Course
+                                    2019: Build Real Projects! </a>
+                            </h6>
+                        </div>
+                        <div class="col-sm-12">
+                            <small>
+                                Master JavaScript with the most complete course! Projects, challenges, quizzes,
+                                JavaScript ES6+,
+                                OOP, AJAX, Webpack
+                            </small>
+                        </div>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/certificate-js-2019.jpg" alt="" class="w-100">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -1,8 +1,18 @@
 @import './_config';
 
+
+body, 
+.logo {
+    background-color: #333333;
+}
+
+
 a {
-    &:hover {
-        
+    i{
+        &:hover {
+            @include ease();
+            color: $primaryColor !important;
+        }
     }
 }
 
@@ -42,7 +52,6 @@ header {
         i {
             font-size: 20px;
             margin-right: 20px;
-            border: 1px solid red;
             border-radius: 30px;
             padding: 7px 9px;
 
@@ -60,6 +69,11 @@ header {
 
     i {
         font-size: 50px;
+
+        &:hover {
+            @include scaleUp(1.2);
+            @include pointer();
+        }
     }
 
     h3 {
@@ -96,6 +110,11 @@ header {
 
 // certificates
 #certificates{
+    .link-img-hover {
+        &:after {
+            font-size: 35px !important;
+        }
+    }
 }
 
 // hireMe

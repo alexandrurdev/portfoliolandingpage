@@ -1,3 +1,15 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+p,
+i,
+a {
+  color: #fff; }
+
 body {
   overflow-x: hidden; }
 
@@ -10,10 +22,40 @@ h4 {
   font-size: 1.125rem; }
 
 a:hover {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #d40c12; }
 
 .separated-content {
   margin-top: 75px; }
+
+.link-img-hover {
+  position: relative; }
+  .link-img-hover:after {
+    top: -9999px;
+    left: 50%;
+    font-size: 50px;
+    font-weight: 900;
+    content: "\f00e";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-family: "Font Awesome 5 Free";
+    transition: all 0.5s ease;
+    color: #d40c12; }
+  .link-img-hover:hover {
+    cursor: pointer; }
+    .link-img-hover:hover:after {
+      top: 50%; }
+
+.color-primary {
+  color: #d40c12; }
+
+body,
+.logo {
+  background-color: #333333; }
+
+a i:hover {
+  transition: all 0.5s ease;
+  color: #d40c12 !important; }
 
 header {
   margin-top: 50px;
@@ -38,7 +80,6 @@ header {
   header .social-links i {
     font-size: 20px;
     margin-right: 20px;
-    border: 1px solid red;
     border-radius: 30px;
     padding: 7px 9px; }
   header .social-links .fa-facebook-f {
@@ -48,6 +89,10 @@ header {
   margin-top: 146px; }
   #benefits i {
     font-size: 50px; }
+    #benefits i:hover {
+      transform: scale(1.2);
+      transition: all 0.4s ease-in-out;
+      cursor: pointer; }
   #benefits h3 {
     margin: 35px 0 28px 0; }
   #benefits p {
@@ -61,6 +106,9 @@ header {
   padding-right: 200px; }
   #showcase .project-description.even {
     margin-left: 30px; }
+
+#certificates .link-img-hover:after {
+  font-size: 35px !important; }
 
 #hireMe .contact-social {
   margin: 25px 0; }
