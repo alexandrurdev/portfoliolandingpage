@@ -1,6 +1,6 @@
 ## Start SCSS watcher for render scss
 
-start scss watcher | sass --watch main.scss:main.css <br>
+start scss watcher | <strong>sass --watch main.scss:main.css</strong><br>
 
 ## gitignore file making from gitignore.io
 
