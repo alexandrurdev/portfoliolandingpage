@@ -1,4 +1,5 @@
 @import './_mixins';
+@import './_mobile';
 
 $primaryColor: #d40c12;
 $secondaryColor: #141414;
@@ -21,6 +22,14 @@ body {
     overflow-x: hidden;
 }
 
+h1 {
+    @include fontSize(30px);
+}
+
+h2 {
+    @include fontSize(25px);
+}
+
 h3 {
     @include fontSize(22px);
 }
@@ -33,6 +42,14 @@ a {
     &:hover {
         text-decoration: none;
         color: $primaryColor;
+        @include ease();
+    }
+
+    i{
+        &:hover {
+            @include ease();
+            color: $primaryColor !important;
+        }
     }
 }
 

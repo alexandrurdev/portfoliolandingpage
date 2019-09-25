@@ -6,16 +6,6 @@ body,
     background-color: #333333;
 }
 
-
-a {
-    i{
-        &:hover {
-            @include ease();
-            color: $primaryColor !important;
-        }
-    }
-}
-
 // header
 header {
     margin-top: 50px;
@@ -132,5 +122,60 @@ header {
 #benefits {
     h3 {
         // https://codepen.io/caraujo/full/LVPzxO - camera text effect try this next time when u open the project
+    }
+}
+
+@include mediaSm {
+    html,body {
+        overflow-x: hidden !important;
+    }
+
+    header:before,
+    header:after {
+        content: none !important;
+    }
+
+    .social-links {
+        margin: 0 auto;
+        a {
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+
+    .d-sm-block {
+        display: block !important;
+    }
+}
+
+@include mediaLg {
+    h2 {
+        @include fontSize(22px);
+    }
+    
+    h3 {
+        @include fontSize(18px);
+    }
+    
+    h4 {
+        @include fontSize(16px);
+    }
+
+    header .social-links i {
+        font-size: 11px;
+    }
+
+    #showcase .project-description {
+        padding-right: 5px;
+    }
+
+    #showcase .d-sm-block {
+        display: none !important;
+    }
+}
+
+@include mediaXl {
+    #showcase .d-sm-block {
+        display: none !important;
     }
 }
