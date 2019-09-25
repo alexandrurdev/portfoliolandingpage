@@ -1,6 +1,181 @@
-body {
-    background: red;
+@import './_config';
+
+
+body, 
+.logo {
+    background-color: #333333;
+}
+
+// header
+header {
+    margin-top: 50px;
+    position: relative;
+    padding: 0 !important;
+
+    &:before,
+    &:after {
+        top: 50%;
+        width: 50%;
+        z-index: -1;
+        height: 1px;
+        content: "";
+        display: block;
+        background: red;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+
+    &:before {
+        left: 0;
+    }
+
+    &:after {
+        right: -50px;
+    }
+
     h1 {
-        color: yellow;
+        margin-right: 60px;
+    }
+
+    .social-links {
+
+        i {
+            font-size: 20px;
+            margin-right: 20px;
+            border-radius: 30px;
+            padding: 7px 9px;
+
+        }
+
+        .fa-facebook-f {
+            padding: 7px 12px !important;
+        }
+    }
+}
+
+// benefits
+#benefits {
+    margin-top: 146px;
+
+    i {
+        font-size: 50px;
+
+        &:hover {
+            @include scaleUp(1.2);
+            @include pointer();
+        }
+    }
+
+    h3 {
+        margin: 35px 0 28px 0;
+    }
+
+    p {
+        padding: 0 25px;
+        @include fontSize(16px);
+    }
+}
+
+// showcase
+#showcase {
+
+    .project-description {
+        margin-top: 15px;
+        margin-left: 20px;
+        padding-right: 200px;
+
+        &.even {
+            margin-left: 30px;
+        }
+    }
+}
+
+// about
+#about {
+}
+
+// experience
+#experience {
+}
+
+// certificates
+#certificates{
+    .link-img-hover {
+        &:after {
+            font-size: 35px !important;
+        }
+    }
+}
+
+// hireMe
+#hireMe{
+    .contact-social {
+        margin: 25px 0;
+        a{
+            margin: 0 20px;
+            font-size: 20px;
+        }
+    }
+}
+
+
+#benefits {
+    h3 {
+        // https://codepen.io/caraujo/full/LVPzxO - camera text effect try this next time when u open the project
+    }
+}
+
+@include mediaSm {
+    html,body {
+        overflow-x: hidden !important;
+    }
+
+    header:before,
+    header:after {
+        content: none !important;
+    }
+
+    .social-links {
+        margin: 0 auto;
+        a {
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+
+    .d-sm-block {
+        display: block !important;
+    }
+}
+
+@include mediaLg {
+    h2 {
+        @include fontSize(22px);
+    }
+    
+    h3 {
+        @include fontSize(18px);
+    }
+    
+    h4 {
+        @include fontSize(16px);
+    }
+
+    header .social-links i {
+        font-size: 11px;
+    }
+
+    #showcase .project-description {
+        padding-right: 5px;
+    }
+
+    #showcase .d-sm-block {
+        display: none !important;
+    }
+}
+
+@include mediaXl {
+    #showcase .d-sm-block {
+        display: none !important;
     }
 }
